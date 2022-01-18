@@ -9,7 +9,11 @@ const { v4: uuidv4 } = require("uuid");
 
 app.use(bodyParser.json())
 /*
+Fork the project 
+git clone {url}
 npm i
+
+
 Create server with the following end points 
 POST /users with uuid, unique username 
 PATCH /users/id 
@@ -24,6 +28,11 @@ Create Route For users
 Bonus
 Edit patch end point to handle the sent data only
 If age is not sent return all users
+
+
+git add .
+git commit -m "message"
+git push
 */
 
 app.post("/users", validateUser, async (req, res, next) => {
