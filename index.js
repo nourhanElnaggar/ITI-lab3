@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const userRouter = require('./routers/usersRouter')
 const {logRequest} = require('./generalHelpers')
 const { v4: uuidv4 } = require("uuid");
+const { validateUser } = require("./userHelpers");
 
 app.use(bodyParser.json())
 /*
@@ -72,7 +73,6 @@ app.get('/users', async (req,res,next)=>{
 
 })
 
-app.use(logRequest)
 
 app.use((err,req,res,next)=>{
 
