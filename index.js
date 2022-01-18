@@ -9,6 +9,7 @@ const { v4: uuidv4 } = require("uuid");
 
 app.use(bodyParser.json())
 /*
+https://www.youtube.com/playlist?list=PLdRrBA8IaU3Xp_qy8X-1u-iqeLlDCmR8a
 Fork the project 
 git clone {url}
 npm i
@@ -46,7 +47,6 @@ app.post("/users", validateUser, async (req, res, next) => {
       await fs.promises.writeFile("./user.json", JSON.stringify(data), {
           encoding: "utf8",
       });
-
       res.send({ id, message: "sucess" });
   } catch (error) {
       next({ status: 500, internalMessage: error.message });
