@@ -101,6 +101,7 @@ router.delete("/:userId", async (req, res, next) => {
     next({ status: 500, internalMessage: error.message });
   }
 });
+ 
 
 router.use((err, req, res, next) => {
   if (err.status >= 500) {
